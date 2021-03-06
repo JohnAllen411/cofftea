@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weekly_distribution_days",
+  "info": {
+    "name": "weeklyDistributionDay"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sales_representative": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "weekly_distribution_days"
+    },
+    "shop": {
+      "via": "weekly_distribution_days",
+      "model": "shop"
+    },
+    "week_day": {
+      "model": "week-day",
+      "via": "weekly_distribution_days"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "store_traffics",
+  "info": {
+    "name": "storeTraffic"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "store": {
+      "via": "store_traffics",
+      "model": "store"
+    },
+    "product": {
+      "model": "product",
+      "via": "store_traffics"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "damaged_reason": {
+      "type": "string"
+    },
+    "distribution_vehicle_products": {
+      "via": "store_traffic",
+      "collection": "distribution-vehicle-product"
+    }
+  }
+}

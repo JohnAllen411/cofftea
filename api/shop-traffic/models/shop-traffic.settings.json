@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_traffics",
+  "info": {
+    "name": "shopTraffic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "shop": {
+      "via": "shop_traffics",
+      "model": "shop"
+    },
+    "distribution_vehicle_product": {
+      "model": "distribution-vehicle-product",
+      "via": "shop_traffics"
+    },
+    "type": {
+      "type": "string"
+    },
+    "reference_reason": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

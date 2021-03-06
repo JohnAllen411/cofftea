@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distribution_vehicle_products",
+  "info": {
+    "name": "distributionVehicleProduct"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sales_representative": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "distribution_vehicle_products"
+    },
+    "store_traffic": {
+      "model": "store-traffic",
+      "via": "distribution_vehicle_products"
+    },
+    "current_quantity": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "shop_traffics": {
+      "via": "distribution_vehicle_product",
+      "collection": "shop-traffic"
+    }
+  }
+}

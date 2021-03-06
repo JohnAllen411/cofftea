@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/weekly-distribution-days",
+      "handler": "weekly-distribution-day.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/weekly-distribution-days/count",
+      "handler": "weekly-distribution-day.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/weekly-distribution-days/:id",
+      "handler": "weekly-distribution-day.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/weekly-distribution-days",
+      "handler": "weekly-distribution-day.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/weekly-distribution-days/:id",
+      "handler": "weekly-distribution-day.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/weekly-distribution-days/:id",
+      "handler": "weekly-distribution-day.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

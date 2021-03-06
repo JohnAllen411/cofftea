@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_order_prodects",
+  "info": {
+    "name": "shopOrderProdect"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "shop": {
+      "via": "shop_order_prodects",
+      "model": "shop"
+    },
+    "product": {
+      "model": "product",
+      "via": "shop_order_prodects"
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

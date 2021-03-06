@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/distribution-vehicle-products",
+      "handler": "distribution-vehicle-product.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/distribution-vehicle-products/count",
+      "handler": "distribution-vehicle-product.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/distribution-vehicle-products/:id",
+      "handler": "distribution-vehicle-product.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/distribution-vehicle-products",
+      "handler": "distribution-vehicle-product.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/distribution-vehicle-products/:id",
+      "handler": "distribution-vehicle-product.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/distribution-vehicle-products/:id",
+      "handler": "distribution-vehicle-product.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

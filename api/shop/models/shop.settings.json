@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "name": "shop",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "neighborhood": {
+      "model": "neighborhood",
+      "via": "shops"
+    },
+    "shopkeeper": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "shops"
+    },
+    "shop_order_prodects": {
+      "collection": "shop-order-prodect",
+      "via": "shop"
+    },
+    "weekly_distribution_days": {
+      "collection": "weekly-distribution-day",
+      "via": "shop"
+    },
+    "shop_traffics": {
+      "collection": "shop-traffic",
+      "via": "shop"
+    }
+  }
+}
